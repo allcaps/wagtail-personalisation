@@ -1,12 +1,13 @@
 from datetime import datetime
+from functools import lru_cache
 from importlib import import_module
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AnonymousUser
-from django.contrib.staticfiles.templatetags.staticfiles import static
+from django.templatetags.static import static
+
 from django.test.client import RequestFactory
-from django.utils.lru_cache import lru_cache
 from django.utils.translation import ugettext_lazy as _
 from wagtail.admin.forms import WagtailAdminModelForm
 
