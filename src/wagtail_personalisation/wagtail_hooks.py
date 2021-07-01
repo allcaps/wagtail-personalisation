@@ -124,7 +124,7 @@ def dont_show_variant(parent_page, pages, request):
 
 
 @hooks.register('register_page_listing_buttons')
-def page_listing_variant_buttons(page, page_perms, is_parent=False):
+def page_listing_variant_buttons(page, page_perms, is_parent=False, next_url=None):
     """Adds page listing buttons to personalisable pages. Shows variants for
     the page (if any) and a 'Create a new variant' button.
 
@@ -145,7 +145,7 @@ def page_listing_variant_buttons(page, page_perms, is_parent=False):
 
 
 @hooks.register('register_page_listing_variant_buttons')
-def page_listing_more_buttons(page, page_perms, is_parent=False):
+def page_listing_more_buttons(page, page_perms, is_parent=False, next_url=None):
     """Adds a 'more' button to personalisable pages allowing users to quickly
     create a new variant for the selected segment.
 
